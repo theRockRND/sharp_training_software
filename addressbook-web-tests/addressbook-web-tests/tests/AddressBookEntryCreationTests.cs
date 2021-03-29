@@ -8,9 +8,9 @@ namespace WebAddressbookTests
         [Test]
         public void TheAddressBookEntryCreationTestsTest()
         {
-            OpenHomePage();
-            Login(new AccountData("admin", "secret"));
-            GoToEntryPage();
+            app.Navigator.OpenHomePage();
+            app.Auth.Login(new AccountData("admin", "secret"));
+            app.Navigator.GoToEntryPage();
             EntryData entry = new EntryData("Михаил");
             entry.Lastname = "Трубицин";
             entry.Middlename = "Юрьевич";
@@ -29,10 +29,10 @@ namespace WebAddressbookTests
             entry.Address2 = "195000 Санкт-Петербург, Нейшлотский переулок 12";
             entry.Phone2 = "812-123-456";
             entry.Notes = "Комментарий или замечание, или и то и другое. не уверен точно"; 
-            FillEntryForm(entry);
-            Submit();
-            ReturnToEntryPage();
-            Logout();
+            app.Contacts.FillEntryForm(entry);
+            app.Contacts.SubmitEntryCreation();
+            app.Contacts.ReturnToEntryPage();
+            app.Auth.Logout();
         }
     }
 }
