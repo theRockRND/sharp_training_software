@@ -76,5 +76,62 @@ namespace WebAddressbookTests
         {
             driver.FindElement(By.LinkText("home page")).Click();
         }
+
+        public void ClickToHomePage()
+        {
+            driver.FindElement(By.LinkText("home")).Click();
+        }
+        public void SelectContact(int index)
+        {
+            driver.FindElement(By.Name("selected[]")).Click();
+        }
+
+        public void ClickDeleteButton()
+        {
+            driver.FindElement(By.XPath("//input[@value='Delete']")).Click();
+        }
+
+        public void CloseWindowDialog()
+        {
+            driver.SwitchTo().Alert().Accept();
+        }
+
+        public void ClickDetailsButton()
+        {
+            driver.FindElement(By.XPath("//img[@alt='Details']")).Click();
+        }
+
+        public void ClickModifyButton()
+        {
+            driver.FindElement(By.Name("modifiy")).Click();
+        }
+
+        public void EditFirstName()
+        {
+            driver.FindElement(By.Name("firstname")).Clear();
+            driver.FindElement(By.Name("firstname")).SendKeys("Другое имя");
+        }
+        public void EditMiddleName()
+        {
+            driver.FindElement(By.Name("middlename")).Clear();
+            driver.FindElement(By.Name("middlename")).SendKeys("Второе Отчество");
+        }
+
+        public void EditLastName()
+        {
+            driver.FindElement(By.Name("lastname")).Clear();
+            driver.FindElement(By.Name("lastname")).SendKeys("А это фамилия другая");
+        }
+
+        public void EditAddress()
+        {
+            driver.FindElement(By.Name("address")).Clear();
+            driver.FindElement(By.Name("address")).SendKeys("ещё здесь поменяю");
+        }
+        public void ClickUpdateButton()
+        {
+            driver.FindElement(By.XPath("(//input[@name='update'])[2]")).Click();
+        }
+        
     }
 }

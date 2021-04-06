@@ -62,6 +62,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="tests\AddressBookEntryRemovalTests.cs" />
+    <Compile Include="tests\AddressBookEntryEditTests.cs" />
+    <Compile Include="tests\GroupEditTests.cs" />
     <Compile Include="model\AccountData.cs" />
     <Compile Include="tests\AddressBookEntryCreationTests.cs" />
     <Compile Include="appmanager\ApplicationManager.cs" />

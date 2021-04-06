@@ -6,7 +6,7 @@ namespace WebAddressbookTests
     public class AddressBookEntryCreationTests : TestBase
     {
         [Test]
-        public void TheAddressBookEntryCreationTestsTest()
+        public void TheAddressBookEntryCreationTest()
         {
             app.Navigator.OpenHomePage();
             app.Auth.Login(new AccountData("admin", "secret"));

@@ -46,5 +46,34 @@ namespace WebAddressbookTests
         {
             driver.FindElement(By.Name("submit")).Click();
         }
+
+        public void EditGroup()
+        {
+            driver.FindElement(By.Name("edit")).Click();
+        }
+
+        public void EditGroupName()
+        {
+            driver.FindElement(By.Name("group_name")).Click();
+            driver.FindElement(By.Name("group_name")).Clear();
+            driver.FindElement(By.Name("group_name")).SendKeys("Здесь я введу буквы");
+        }
+
+        public void EditGroupHeader()
+        {
+            driver.FindElement(By.Name("group_header")).Clear();
+            driver.FindElement(By.Name("group_header")).SendKeys("");
+        }
+
+        public void EditGroupFooter()
+        {
+            driver.FindElement(By.Name("group_footer")).Clear();
+            driver.FindElement(By.Name("group_footer")).SendKeys("Здесь отредактирую сообщение также, а header оставлю пустым");
+        }
+
+        public void ClickUpdateButton()
+        {
+            driver.FindElement(By.Name("update")).Click();
+        }
     }
 }
