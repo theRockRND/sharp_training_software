@@ -106,28 +106,6 @@ namespace WebAddressbookTests
             driver.FindElement(By.Name("modifiy")).Click();
         }
 
-        public void EditFirstName()
-        {
-            driver.FindElement(By.Name("firstname")).Clear();
-            driver.FindElement(By.Name("firstname")).SendKeys("Другое имя");
-        }
-        public void EditMiddleName()
-        {
-            driver.FindElement(By.Name("middlename")).Clear();
-            driver.FindElement(By.Name("middlename")).SendKeys("Второе Отчество");
-        }
-
-        public void EditLastName()
-        {
-            driver.FindElement(By.Name("lastname")).Clear();
-            driver.FindElement(By.Name("lastname")).SendKeys("А это фамилия другая");
-        }
-
-        public void EditAddress()
-        {
-            driver.FindElement(By.Name("address")).Clear();
-            driver.FindElement(By.Name("address")).SendKeys("ещё здесь поменяю");
-        }
         public void ClickUpdateButton()
         {
             driver.FindElement(By.XPath("(//input[@name='update'])[2]")).Click();

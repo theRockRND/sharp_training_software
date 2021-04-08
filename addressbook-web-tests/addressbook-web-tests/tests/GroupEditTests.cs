@@ -12,10 +12,11 @@ namespace WebAddressbookTests
             app.Auth.Login(new AccountData("admin", "secret"));
             app.Navigator.GoToGroupsPage();
             app.Groups.SelectGroup(1);
-            app.Groups.EditGroup();
-            app.Groups.EditGroupName();
-            app.Groups.EditGroupHeader();
-            app.Groups.EditGroupFooter();
+            app.Groups.EditGroupButton();
+            GroupData group = new GroupData("zzz");
+            group.Footer = "yyy";
+            group.Header = "xxx";
+            app.Groups.FillGroupForm(group);
             app.Groups.ClickUpdateButton();
             app.Groups.ReturnsToGroupPage();
             app.Auth.Logout();
