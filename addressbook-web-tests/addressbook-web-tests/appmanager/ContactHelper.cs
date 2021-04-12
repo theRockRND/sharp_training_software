@@ -83,9 +83,9 @@ namespace WebAddressbookTests
         }
         public void SelectContact(int index)
         {
-            driver.FindElement(By.Name("selected[]")).Click();
+            driver.FindElement(By.XPath("(//input[@name='selected[]'])[" + index + "]")).Click();
         }
-
+              
         public void ClickDeleteButton()
         {
             driver.FindElement(By.XPath("//input[@value='Delete']")).Click();
